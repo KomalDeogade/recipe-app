@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 20px;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0eafc 100%);
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+form, #searchInput {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 24px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+}
+
+input[type="text"], textarea {
+  padding: 10px 12px;
+  border: 1px solid #bfc9d1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #5b9df9;
+  outline: none;
+}
+
+button, input[type="submit"] {
+  background: linear-gradient(90deg, #ffc107 60%, #ff9800 100%);
+  color: #2c3e50;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: linear-gradient(90deg, #ff9800 60%, #ffc107 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+#recipeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+  padding: 30px 10px;
+}
+
+.recipe-card {
+  background: #fffbe6;
+  border: 1px solid #ffe082;
+  padding: 18px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(255, 193, 7, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.recipe-card:hover {
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+  color: #e65100;
+  margin-bottom: 8px;
+}
+
+.recipe-card strong {
+  color: #2c3e50;
+}
+
+.recipe-card p {
+  margin: 4px 0 10px 0;
+  color: #444;
+}
+
+#validationMsg {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#searchInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  #recipeList {
+    grid-template-columns: 1fr;
+    padding: 10px 0;
+  }
+  form, #searchInput {
+    max-width: 98vw;
+    padding: 16px 6px;
+  }
+}
+#randomRecipe {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 24px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+}
+#randomRecipe img {
+  display: block;
+  margin: 0 auto 10px auto;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+}
