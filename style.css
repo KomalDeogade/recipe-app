@@ -12,7 +12,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-form, #searchInput {
+form {
   max-width: 600px;
   margin: 20px auto;
   display: flex;
@@ -22,6 +22,23 @@ form, #searchInput {
   padding: 24px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+}
+
+#searchInput {
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid #bfc9d1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+#searchInput:focus {
+  border-color: #5b9df9;
+  outline: none;
 }
 
 input[type="text"], textarea {
@@ -54,6 +71,21 @@ button, input[type="submit"] {
 button:hover, input[type="submit"]:hover {
   background: linear-gradient(90deg, #ff9800 60%, #ffc107 100%);
   transform: translateY(-2px) scale(1.03);
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.delete-btn:hover {
+  background: #c0392b;
 }
 
 #recipeList {
@@ -100,11 +132,6 @@ button:hover, input[type="submit"]:hover {
   text-align: center;
 }
 
-#searchInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 @media (max-width: 700px) {
   #recipeList {
     grid-template-columns: 1fr;
@@ -128,3 +155,28 @@ button:hover, input[type="submit"]:hover {
   margin: 0 auto 10px auto;
   box-shadow: 0 2px 12px rgba(44,62,80,0.08);
 }
+
+/* Simple modal styles */
+#modalOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.2s;
+}
+#modalOverlay[style*="display: flex"] {
+  display: flex !important;
+  opacity: 1;
+}
+#modalContent {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90vw;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.15);
+}
+
