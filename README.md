@@ -17,20 +17,13 @@ Add, search, view, and delete your favorite recipes — with images and a random
 
 1. Clone the repository:
    ```sh
-   git clone 
+   git clone https://github.com/KomalDeogade/recipe-app 
 
    ```
 
 2. Open `index.html` in your browser.
 
-   > No build tools or server required!
-
-
- 🖼️ Screenshots
-
-_Add screenshots of your app here!_
-
-
+   > No build tools or server required.
 
  🛠️ Technologies Used
 
@@ -68,7 +61,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
  ✍️ Author
  
-[Komal Deogade]
+[Komal Deogade]https://github.com/KomalDeogade/recipe-app
 
 🔥 Ideas for Improvement
 
